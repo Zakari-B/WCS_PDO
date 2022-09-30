@@ -14,8 +14,6 @@ if ($firstname != "" && $lastname != "") {
     $statement->bindValue(':firstname', $firstname, \PDO::PARAM_STR);
     $statement->bindValue(':lastname', $lastname, \PDO::PARAM_STR);
     $statement->execute();
+    header("Location: index.php");
+    exit;
 }
-?>
-<script>
-    window.location.replace("http://localhost:8000/index.php")
-</script>
